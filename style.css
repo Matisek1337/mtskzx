@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-body {
+body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,68 +9,74 @@ body {
     text-align: center;
     background-image: url("img/background.png");
     background-size: cover;
-    font-family: "Rubik", sans-serif;
 }
 
-#main-container {
-    display: flex;
-    flex-direction: column;
+#main-container{
+    width: 50%;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
     text-align: center;
 }
 
-#main-container img {
-    height: 100px;
-    width: 309px;
-    padding: 15px;
+#main-container img{
+  text-align: center;
+  height: 100px;
+  width: 309px;
+  padding: 15px;
 }
 
-.link {
-    appearance: none;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: normal;
-    margin: 5px;
-    min-height: 60px;
-    outline: none;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 100%;
+#twitch-player{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  width: 40%;
+  aspect-ratio: 16/9;
 }
 
-.link:hover {
-    color: #fff;
-    background-color: #44A33C;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
+#link {
+  appearance: none;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 3px;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 40%;
+  will-change: transform;
 }
 
-.link:active {
-    box-shadow: none;
-    transform: translateY(0);
+#link:disabled {
+  pointer-events: none;
 }
 
-.twitch-stream {
-    width: 100%;
-    max-width: 600px;
-    height: 338px;
-    margin-top: 20px;
-    margin: 0 auto;
+#link:hover {
+  color: #fff;
+  background-color: #44A33C;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#link:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 #footer{
@@ -85,22 +91,44 @@ body {
   height: 60px;
 }
 
+#footer a{
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #0000003b;
+  border-radius: 10px;
+}
+
 #madeby, #madeby:link, #madeby:visited, #madeby:active{
   text-decoration: none;
   touch-action: manipulation;
   color: white;
   transition: font-weight 0.3s ease;
+  text-shadow: 0 0 2px black;
 }
 
 #madeby:hover{
   font-weight: 500; 
 }
 
-@media screen and (max-width: 760px) {
-    #main-container {
-        width: 90%;
-    }
-    .twitch-stream {
-        height: 225px;
-    }
+/* smartphone resolutions etc. */
+@media screen and (max-width: 780px){
+  #main-container{
+    width: 100%;
+  }
+  #link{
+    width: 50%;
+  }
+  #twitch-player{
+    width: 50%;
+  }
 }
+@media screen and (max-width: 1200px){
+  #main-container img{
+    text-align: center;
+    height: 50px;
+    width: 155px;
+    padding: 15px;
+  }
+}
+
