@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,9 +9,10 @@ body{
     text-align: center;
     background-image: url("img/background.png");
     background-size: cover;
+    font-family: "Rubik", sans-serif;
 }
 
-#main-container{
+#main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,110 +20,80 @@ body{
     height: 100vh;
     margin: 0;
     text-align: center;
-    background-size: cover;
 }
 
-#main-container img{
-  text-align: center;
-  height: 100px;
-  width: 309px;
-  padding: 15px;
+#main-container img {
+    height: 100px;
+    width: 309px;
+    padding: 15px;
 }
 
-#link {
-  appearance: none;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  box-sizing: border-box;
-  color: #3B3B3B;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Rubik", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: normal;
-  margin: 3px;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 20px;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 100%;
-  will-change: transform;
+.link {
+    appearance: none;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px;
+    min-height: 60px;
+    outline: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
 }
 
-#link:disabled {
-  pointer-events: none;
+.link:hover {
+    color: #fff;
+    background-color: #44A33C;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
 }
 
-#link:hover {
-  color: #fff;
-  background-color: #44A33C;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
+.link:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
-#link:active {
-  box-shadow: none;
-  transform: translateY(0);
-}
-
-#twitch-stream {
-    width: 100%; 
+.twitch-stream {
+    width: 100%;
+    max-width: 720px;
+    height: 480px;
     margin-top: 20px;
 }
 
-#footer{
-  margin-top: 15px;
-  color: white;
-  font-family: "Rubik", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
+#footer {
+    margin-top: 15px;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#footer a{
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #0000003b;
-  border-radius: 10px;
+#footer a {
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-decoration: none;
 }
 
-#madeby, #madeby:link, #madeby:visited, #madeby:active{
-  text-decoration: none;
-  touch-action: manipulation;
-  color: white;
-  transition: font-weight 0.3s ease;
-  text-shadow: 0 0 2px black;
+#footer a:hover {
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.4);
 }
-
-#madeby:hover{
-  font-weight: 500; 
-}
-
-/* smartphone resolutions etc. */
-@media screen and (max-width: 760px){
-  #main-container{
-    width: 50%;
-  }
-}
-@media screen and (max-width: 1200px){
-  #main-container img{
-    text-align: center;
-    height: 50px;
-    width: 155px;
-    padding: 15px;
-  }
-}
-
