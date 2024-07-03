@@ -70,6 +70,7 @@ body {
     max-width: 600px;
     height: 338px;
     margin-top: 20px;
+    margin: 0 auto;
 }
 
 #footer{
