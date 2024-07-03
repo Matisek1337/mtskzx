@@ -40,7 +40,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: normal;
-    margin: 10px;
+    margin: 5px;
     min-height: 60px;
     outline: none;
     padding: 20px;
@@ -72,28 +72,31 @@ body {
     margin-top: 20px;
 }
 
-#footer {
-    margin-top: 15px;
-    color: white;
-    font-size: 12px;
-    font-weight: 300;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#footer{
+  margin-top: 15px;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
 }
 
-#footer a {
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    text-decoration: none;
+#madeby, #madeby:link, #madeby:visited, #madeby:active{
+  text-decoration: none;
+  touch-action: manipulation;
+  color: white;
+  transition: font-weight 0.3s ease;
 }
 
-#footer a:hover {
-    font-weight: 500;
-    background-color: rgba(0, 0, 0, 0.4);
+#madeby:hover{
+  font-weight: 500; 
+}
+
+@media screen and (max-width: 760px){
+  #main-container{
+    width: 50%;
+  }
 }
